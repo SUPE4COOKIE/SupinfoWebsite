@@ -14,24 +14,35 @@ header {
     z-index: 1;
 }
 
+#mobilenavbar::after {
+    content: "";
+    visibility: hidden;
+}
+
+#checkbox:checked~#mobilenavbar::after {
+    content: "";
+    display: block;
+}
+
+#menuicon {
+    height: 3rem;
+    margin-top: 1.5rem;
+    position: absolute;
+    right: 1rem;
+    cursor: pointer;
+
+}
+
 #topbar {
     display: flex;
     flex-direction: row;
     background-color: var(--white);
-    height: 8rem;
-    justify-content: center;
-}
-
-#topbar img {
-    margin-top: 1.5rem;
-    margin-left: 2rem;
-    width: 5rem;
-    height: 5rem;
+    height: 6rem;
 
 }
 
 #topbar>p {
-    margin-top: 2.5rem;
+    margin-top: 1.5rem;
     margin-left: 2rem;
     font-size: 0.75rem;
     font-weight: 550;
@@ -39,19 +50,62 @@ header {
     font-family: 'Roboto', sans-serif;
 }
 
-#subbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    background-color: var(--purple);
+#logo {
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    width: 5rem;
     height: 5rem;
+
 }
 
-#subbar>a {
-    margin-top: 1.5rem;
-    font-size: 1rem;
-    font-weight: 550;
-    color: var(--white);
-    font-family: 'Roboto', sans-serif;
-    text-decoration: none;
+#subbar {
+    display: none;
+}
+
+@media only screen and (min-width:992px) {
+    #menuicon {
+        display: none;
+    }
+
+    #topbar {
+        display: flex;
+        flex-direction: row;
+        background-color: var(--white);
+        height: 8rem;
+        justify-content: center;
+    }
+
+    #logo {
+        margin-top: 1.5rem;
+        margin-left: 2rem;
+        width: 5rem;
+        height: 5rem;
+
+    }
+
+    #topbar>p {
+        margin-top: 2.5rem;
+        margin-left: 2rem;
+        font-size: 0.75rem;
+        font-weight: 550;
+        color: var(--purple);
+        font-family: 'Roboto', sans-serif;
+    }
+
+    #subbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        background-color: var(--purple);
+        height: 5rem;
+    }
+
+    #subbar>a {
+        margin-top: 1.5rem;
+        font-size: 1rem;
+        font-weight: 550;
+        color: var(--white);
+        font-family: 'Roboto', sans-serif;
+        text-decoration: none;
+    }
 }
