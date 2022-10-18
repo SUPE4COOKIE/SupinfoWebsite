@@ -20,14 +20,27 @@ body {
 
 
 .menu {
-    display: none;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--purple);
+    justify-content: space-evenly;
+    position: sticky;
+    top: 7rem;
 }
 
 .menu a {
-    display: block;
-    border-bottom: 1px solid black;
-    margin: 0;
+    color: var(--white);
+    text-decoration: none;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+}
 
+.menu a:hover {
+    color: grey;
+    text-decoration: none;
 }
 
 #toggle:checked~.menu {
@@ -37,6 +50,12 @@ body {
 #topbar {
     display: flex;
     flex-direction: row;
+    background-color: var(--white);
+}
+
+#test {
+    position: sticky;
+    top: 0;
 }
 
 #topbar>img {
@@ -74,14 +93,19 @@ body {
         width: 100%;
         display: none;
         background-color: var(--purple);
+        position: sticky;
+        z-index: 1;
+        top: 7rem;
     }
 
     .menu a {
         display: block;
         color: var(--white);
         border-bottom: 1px solid var(--white);
-        margin-top: 50px;
-
+        padding: 25px;
+        text-decoration: none;
+        font-size: 1rem;
+        font-family: 'Roboto', sans-serif;
     }
 
     #toggle:checked+.menu {
