@@ -18,6 +18,58 @@ body {
     visibility: hidden;
 }
 
+#screen {
+    background-color: black;
+    background-image: radial-gradient(var(--purple), black 120%);
+    width: 75%;
+    border-radius: 19px;
+    margin: 0 auto;
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#screen h1 {
+    color: var(--white);
+    display: flex;
+    font-family: 'Lucida Grande', sans-serif;
+    justify-content: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+#screen h1 span {
+    color: var(--white);
+    animation: blink 1s infinite normal;
+}
+
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+#historytext {
+    border: 5px dashed var(--purple);
+    color: var(--purple);
+    font-family: 'Lucida Grande', sans-serif;
+    font-size: 1.5rem;
+    margin: 0 auto;
+    width: 75%;
+    margin-top: 2rem;
+    text-align: center;
+    border-radius: 19px;
+}
 
 .menu {
     display: flex;
@@ -25,7 +77,8 @@ body {
     background-color: var(--purple);
     justify-content: space-evenly;
     position: sticky;
-    top: 7rem;
+    top: 6.5rem;
+    z-index: 1;
 }
 
 .menu a {
@@ -42,6 +95,8 @@ body {
     color: grey;
     text-decoration: none;
 }
+
+
 
 #toggle:checked~.menu {
     display: block;
@@ -63,6 +118,7 @@ body {
     margin-left: 2rem;
     width: 5rem;
     height: 5rem;
+    margin-bottom: 10px;
 }
 
 #topbar>p {
@@ -76,7 +132,6 @@ body {
 
 .separator {
     border: 1px solid var(--purple);
-    margin-top: 10px;
 }
 
 footer {
@@ -169,5 +224,10 @@ footer a {
         right: 0;
         margin-top: 2rem;
         margin-right: 0.5rem;
+    }
+
+    #historytext {
+        width: 80%;
+        font-size: 1rem;
     }
 }
