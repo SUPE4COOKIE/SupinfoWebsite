@@ -1,3 +1,8 @@
+:root {
+    --purple: #3D2683;
+    --white: #fafaf8;
+}
+
 *, ::before, ::after {
     box-sizing: border-box;
     margin: 0;
@@ -5,7 +10,7 @@
 }
 
 body {
-    background-color: #333;
+    background-color: white;
     height: 100vh;
 }
 
@@ -24,8 +29,9 @@ h1 {
     margin: 50px auto 0;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    background-color: #3D2683;
     height: 600px;
+    margin-bottom: 10%;
+    overflow: auto;
 }
 
 .item {
@@ -45,6 +51,167 @@ p {
     text-align: center;
     font-family: "Roboto", sans-serif;
     font-size: 10px;
-    color: white;
+    color: black;
     margin-top: 3px;
 }
+
+#topbar {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--white);
+}
+
+#test {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+#topbar>img {
+    margin-top: 1.5rem;
+    margin-left: 2rem;
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 10px;
+}
+
+#topbar>p {
+    margin-top: 2.5rem;
+    margin-left: 1.5rem;
+    font-size: 0.75rem;
+    font-weight: 550;
+    color: var(--purple);
+    font-family: 'Roboto', sans-serif;
+}
+
+.separator {
+    border: 1px solid var(--purple);
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--purple);
+    justify-content: space-evenly;
+    position: sticky;
+    top: 6.5rem;
+    z-index: 1;
+}
+
+.menu a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+}
+
+.menu a:hover {
+    color: grey;
+    text-decoration: none;
+}
+
+#toggle:checked~.menu {
+    display: block;
+}
+
+@media only screen and (max-width: 600px) {
+    label {
+        display: block;
+        cursor: pointer;
+        visibility: visible !important;
+    }
+
+    .menu {
+        text-align: center;
+        width: 100%;
+        display: none;
+        background-color: var(--purple);
+        position: sticky;
+        z-index: 1;
+        top: 7rem;
+    }
+
+    .menu a {
+        display: block;
+        color: var(--white);
+        border-bottom: 1px solid var(--white);
+        padding: 25px;
+        text-decoration: none;
+        font-size: 1rem;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    #toggle:checked+.menu {
+        display: block;
+    }
+
+
+    label img {
+        cursor: pointer;
+        display: block;
+        width: 50px;
+        position: absolute;
+        right: 0;
+        margin-top: 2rem;
+        margin-right: 0.5rem;
+    }}
+
+    #toggle {
+        display: none;
+    }
+    
+    #topbar label {
+        visibility: hidden;
+     }
+
+     footer {
+        display: flex;
+        background-color: var(--purple);
+        color: var(--white);
+        padding: 1rem;
+        font-size: 0.75rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        font-family: "Roboto", sans-serif;
+        justify-content: center;
+    }
+    
+    footer>div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    footer>div>div {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    footer img {
+        width: 5rem;
+        height: 5rem;
+        margin-top: 2rem;
+    }
+    
+    footer p {
+        margin-top: 2.5rem;
+        margin-left: 1.5rem;
+        font-size: 0.75rem;
+        font-weight: 550;
+        color: var(--white);
+        font-family: 'Roboto', sans-serif;
+        text-transform: uppercase;
+    
+    }
+    
+    footer a {
+        text-decoration: none;
+        font-size: 0.75rem;
+        font-weight: 550;
+        color: var(--white);
+        font-family: 'Roboto', sans-serif;
+    }
