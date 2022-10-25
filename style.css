@@ -39,6 +39,28 @@ body {
     display: none;
 }
 
+#programmes {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 3rem;
+    position: sticky;
+    top: 10rem;
+    z-index: 9;
+}
+
+#programmes a {
+    color: var(--purple);
+    border-bottom: 1px solid gray;
+    padding: 25px;
+    text-decoration: none;
+    font-size: 1rem;
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
 #topbar label {
     visibility: hidden;
 }
@@ -48,6 +70,7 @@ body {
     opacity: 0;
     filter: blur(10px);
     transform: translateX(-100%);
+    z-index: 0;
 }
 
 
@@ -62,9 +85,9 @@ body {
     flex-direction: column;
     justify-content: center;
     opacity: 1;
-    z-index: 0;
     filter: blur(0px);
     transform: translateX(0);
+
 }
 
 .animatedscreen h1 {
@@ -141,6 +164,12 @@ body {
     color: grey;
     text-decoration: none;
 }
+
+
+
+
+
+
 
 
 
@@ -279,5 +308,14 @@ footer a {
         font-size: 1rem;
     }
 
+    .animatedscreen h1 {
+        color: var(--white);
+        display: flex;
+        font-family: 'Lucida Grande', sans-serif;
+        justify-content: center;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        font-size: 1.5rem;
+    }
 
 }
