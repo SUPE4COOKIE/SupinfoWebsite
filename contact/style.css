@@ -1,0 +1,348 @@
+:root {
+    --purple: #3D2683;
+    --white: #fafaf8;
+    --lightpurple: #8074b1;
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#topbar {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--white);
+}
+
+#programmes {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 3rem;
+    position: sticky;
+    top: 10rem;
+    z-index: 9;
+}
+
+#programmes a {
+    color: var(--purple);
+    border-bottom: 1px solid gray;
+    padding: 25px;
+    text-decoration: none;
+    font-size: 1rem;
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+#stickycontainer {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+#topbar>img {
+    margin-top: 1.5rem;
+    margin-left: 2rem;
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 10px;
+}
+
+#topbar>p {
+    margin-top: 2.5rem;
+    margin-left: 1.5rem;
+    font-size: 0.75rem;
+    font-weight: 550;
+    color: var(--purple);
+    font-family: 'Roboto', sans-serif;
+}
+
+.separator {
+    border: 1px solid var(--purple);
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--purple);
+    justify-content: space-evenly;
+    position: sticky;
+    top: 6.5rem;
+    z-index: 1;
+}
+
+.menu a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+}
+
+.menu a:hover {
+    color: grey;
+    text-decoration: none;
+}
+
+#toggle:checked~.menu {
+    display: block;
+}
+
+@media only screen and (max-width: 600px) {
+    label {
+        display: block;
+        cursor: pointer;
+        visibility: visible !important;
+    }
+
+    .menu {
+        text-align: center;
+        width: 100%;
+        display: none;
+        background-color: var(--purple);
+        position: sticky;
+        z-index: 1;
+        top: 7rem;
+    }
+
+    .menu a {
+        display: block;
+        color: var(--white);
+        border-bottom: 1px solid var(--white);
+        padding: 25px;
+        text-decoration: none;
+        font-size: 1rem;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    #toggle:checked+.menu {
+        display: block;
+    }
+
+    #toggle2:checked~#mobile_submenu {
+        display: block;
+    }
+
+
+    label img {
+        cursor: pointer;
+        display: block;
+        width: 50px;
+        position: absolute;
+        right: 0;
+        margin-top: 2rem;
+        margin-right: 0.5rem;
+    }
+
+    #mobile_submenu {
+        display: none;
+    }
+
+    #mobile_submenu a {
+        background-color: var(--lightpurple);
+    }
+
+    #programmes {
+        display: none !important;
+    }
+}
+
+#toggle {
+    display: none;
+}
+
+#toggle2 {
+    display: none;
+}
+
+#mobile_submenu {
+    display: none;
+}
+
+#topbar label {
+    visibility: hidden;
+}
+
+footer {
+    display: flex;
+    background-color: var(--purple);
+    color: var(--white);
+    padding: 1rem;
+    font-size: 0.75rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    justify-content: center;
+}
+
+footer>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer>div>div {
+    display: flex;
+    flex-direction: row;
+}
+
+footer img {
+    width: 5rem;
+    height: 5rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin-top: 2.5rem;
+    margin-left: 1.5rem;
+    font-size: 0.75rem;
+    font-weight: 550;
+    color: var(--white);
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+
+}
+
+footer a {
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 550;
+    color: var(--white);
+    font-family: 'Roboto', sans-serif;
+}
+
+/*Contact*/
+
+header {
+    font-family: "Roboto", sans-serif;
+    font-size: 50px;
+    background-image: url(https://static.vecteezy.com/ti/vecteur-libre/p2/829808-banniere-moderne-futuriste-filaire-terrain-gratuit-vectoriel.jpg);
+    color: #fafaf8;
+    height: 100px;
+}
+
+.bannière {
+    padding: 15px 100px
+}
+
+h1 {
+
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+}
+
+.total {
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    top: 50%;
+    left: 35%;
+}
+
+form {
+    padding: 50px;
+    width: 33%;
+    border-radius: 3px;
+}
+
+form .separation {
+    width: 100%;
+    height: 1px;
+    background-color: #3D2683;
+}
+
+form .corps-formulaire {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+form .corps-formulaire .boite {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+}
+
+form .gauche .boite input {
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 5px 2.5px 5px 6px;
+    transition: all 0.5s ease;
+    outline: none;
+}
+
+form i {
+    position: absolute;
+    left: -30px;
+    padding: 5px 1px;
+    color: #3D2683;
+}
+
+textarea {
+    height: 200px;
+    outline: none;
+    margin-left: 20px;
+}
+
+.inputbasic:focus {
+    border-color: #3D2683;
+
+}
+
+.button {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.button input[type=submit] {
+    background-color: #fafaf8;
+    border: 1px solid #3D2683;
+    padding: 5px;
+    color: #3D2683;
+    transition: all 0.5s ease;
+    border-radius: 5px;
+}
+
+.button input[type=submit]:hover {
+    background-color: #3D2683;
+    color: white;
+    cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #3D2683;
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #3D2683;
+    opacity: 1;
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #3D2683;
+    opacity: 1;
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #3D2683;
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

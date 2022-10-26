@@ -1,13 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Supinfo - contact</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script defer src="../app.js"></script>
+    <link rel="icon" type="image/x-icon" href="icons/favicon.ico">
 </head>
+
 <body>
-    
+
+    <input type="checkbox" id="toggle">
+    <div id="stickycontainer">
+        <div id="topbar">
+            <img src="../img/logo.webp" alt="">
+            <p>L’ÉCOLE DES EXPERTS MÉTIERS <br><br> DE L’INFORMATIQUE</p>
+            <label for="toggle"><img src="../icons/menu.svg" alt=""></label>
+        </div>
+        <div class="separator"></div>
+    </div>
+    </div>
+    <div class="menu">
+        <a href="../index.html">Accueil</a>
+        <a href="#">Trombinoscope</a>
+        <a href="#" id="programme"><label for="toggle2">▼ Programme</label></a>
+        <input type="checkbox" id="toggle2">
+        <div id="mobile_submenu">
+            <a href="../programme/y1/index.html">Année 1</a><a href="../programme/y2/index.html">Année 2</a><a
+                href="../programme/y3/index.html">Année 3</a><a href="../programme/y4/index.html">Année 4</a><a
+                href="../programme/y5/index.html">Année 5</a>
+        </div>
+        <a href="../planning/index.html">Planning</a>
+        <a href="../contact/index.html">Contact</a>
+
+    </div>
+    <div id="programmes">
+        <a href="../programme/y1/index.html">année 1</a>
+        <a href="../programme/y2/index.html">année 2</a>
+        <a href="../programme/y3/index.html">année 3</a>
+        <a href="../programme/y4/index.html">année 4</a>
+        <a href="../programme/y5/index.html">année 5</a>
+    </div>
+    <br>
+    <header>
+        <div class="bannière">Contact</div>
+    </header>
+    <div class="total">
+        <form>
+            <h1>Contactez-nous</h1>
+            <div class="separation"></div>
+            <div class="corps-formulaire">
+                <div class="gauche">
+                    <div class="boite">
+                        <input type="text" name="Nom" placeholder="Nom" required="" class="inputbasic">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="boite">
+                        <input type="text" name="Email" placeholder="Email" required="" class="inputbasic">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="boite">
+                        <input type="text" name="Numéro" placeholder="Numéro de téléphone" required=""
+                            class="inputbasic">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                </div>
+                <div class="droite">
+                    <div class="boite">
+                        <textarea name="Message" placeholder="Message" required="" class="inputbasic"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button">
+                <input type="submit">
+            </div>
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+    <footer>
+        <div>
+            <div>
+                <img src="../img/logo.webp" alt="">
+                <p>L’ÉCOLE DES EXPERTS MÉTIERS <br><br> DE L’INFORMATIQUE</p>
+            </div>
+            <p><b>Adresse : </b>85 Boulevard Marius Vivier-Merle</p>
+            <p><b>Email : </b> <a href="mailto:hien.kean@supinfo.com">hien.kean@supinfo.com</a></p>
+            <p><b>Téléphone : </b> <a href="tel:+33428293576">+33 4 28 29 35 76</a></p>
+        </div>
+    </footer>
+
 </body>
+
 </html>
