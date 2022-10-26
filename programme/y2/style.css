@@ -40,18 +40,21 @@ body {
 
     .navibar {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: center;
+        margin-top: 2rem;
+        width: 100%;
     }
 
     .navibar a {
         color: var(--white);
         border-radius: 10px;
-        margin-bottom: 2rem;
+        margin-bottom: 0.5rem;
         background-color: var(--purple);
         text-decoration: none;
-        font-size: 0.5em;
+        font-size: 1em;
         padding: 0.5em;
         font-family: system-ui,
             -apple-system,

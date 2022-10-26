@@ -141,9 +141,78 @@ body {
     align-items: center;
 }
 
+.title {
+    font-family: 'Lucida Grande', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--purple);
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
 
+.France {
+    width: 40%;
+    filter: blur(10px);
+    opacity: 0;
+    transition: all 1s;
+}
 
+.animatedFrance {
+    width: 40%;
+    filter: blur(0px);
+    opacity: 1;
+}
 
+.iconcontainer {
+    background-color: var(--purple);
+    border-radius: 19px;
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    opacity: 0;
+    filter: blur(10px);
+    transition: all 1s;
+}
+
+.animatediconcontainer {
+    background-color: var(--purple);
+    border-radius: 19px;
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    opacity: 1;
+    filter: blur(0px);
+}
+
+.animatediconcontainer img {
+    width: 100px;
+    height: 100px;
+}
+
+.iconcolumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconcolumn h2 {
+    color: var(--white);
+    font-family: 'Lucida Grande', sans-serif;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.iconcolumn p {
+    color: var(--white);
+    font-family: 'Lucida Grande', sans-serif;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
 
 .menu {
     display: flex;
@@ -307,10 +376,7 @@ footer a {
         margin-right: 0.5rem;
     }
 
-    #historytext {
-        width: 80%;
-        font-size: 1rem;
-    }
+
 
     .animatedscreen h1 {
         color: var(--white);
@@ -332,5 +398,28 @@ footer a {
 
     #programmes {
         display: none !important;
+    }
+
+    .title {
+        font-family: 'Lucida Grande', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--purple);
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+
+    .animatedFrance {
+
+        width: 85%;
+        height: auto;
+    }
+
+    .iconcontainer {
+        width: 100%;
+    }
+
+    .animatediconcontainer {
+        width: 100%;
     }
 }
