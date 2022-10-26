@@ -1,0 +1,340 @@
+:root {
+    --purple: #3D2683;
+    --white: #fafaf8;
+}
+
+body {
+    margin: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    .grid {
+        display: grid;
+        grid-template-rows: 5em 1fr;
+        border: 5px solid var(--purple);
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .subject {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 5px solid var(--purple);
+    }
+
+    .details {
+        background-color: white;
+    }
+
+    .maincontainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 2rem;
+    }
+
+    .navibar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navibar a {
+        color: var(--white);
+        border-radius: 10px;
+        margin-bottom: 2rem;
+        background-color: var(--purple);
+        text-decoration: none;
+        font-size: 0.5em;
+        padding: 0.5em;
+        font-family: system-ui,
+            -apple-system,
+            BlinkMacSystemFont,
+            'Segoe UI',
+            Roboto,
+            Oxygen,
+            Ubuntu,
+            Cantarell,
+            'Open Sans',
+            'Helvetica Neue',
+            sans-serif;
+    }
+
+    label {
+        display: block;
+        cursor: pointer;
+        visibility: visible !important;
+    }
+
+    .menu {
+        text-align: center;
+        width: 100%;
+        display: none;
+        background-color: var(--purple);
+        position: sticky;
+        z-index: 1;
+        top: 7rem;
+    }
+
+    .menu a {
+        display: block;
+        color: var(--white);
+        border-bottom: 1px solid var(--white);
+        padding: 25px;
+        text-decoration: none;
+        font-size: 1rem;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    #toggle:checked+.menu {
+        display: block;
+    }
+
+
+    label img {
+        cursor: pointer;
+        display: block;
+        width: 50px;
+        position: absolute;
+        right: 0;
+        margin-top: 2rem;
+        margin-right: 0.5rem;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .grid {
+        display: grid;
+        margin: auto;
+        grid-template-columns: 0.3fr 1fr;
+        border: 5px solid var(--purple);
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .subject {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-right: 5px solid var(--purple);
+    }
+
+    .maincontainer {
+        display: flex;
+        flex-direction: row;
+        align-items: left;
+    }
+
+    .navibar {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: left;
+        width: 20%;
+        margin-left: 50%;
+        height: 100%;
+        padding: 1em;
+        margin-left: 0;
+    }
+
+    .navibar a {
+        color: var(--white);
+        border-radius: 10px;
+        margin-bottom: 2rem;
+        background-color: #61518f;
+        text-decoration: none;
+        font-size: 1.2em;
+        font-weight: 600;
+        padding: 0.5em;
+        font-family: system-ui,
+            -apple-system,
+            BlinkMacSystemFont,
+            'Segoe UI',
+            Roboto,
+            Oxygen,
+            Ubuntu,
+            Cantarell,
+            'Open Sans',
+            'Helvetica Neue',
+            sans-serif;
+    }
+
+    .navibar a:hover {
+        background-color: var(--purple);
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        background-color: var(--purple);
+        justify-content: space-evenly;
+        position: sticky;
+        top: 6.5rem;
+        z-index: 1;
+    }
+}
+
+
+
+
+.subject h1 {
+    color: var(--purple);
+    font-size: 2rem;
+    font-family: system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        'Segoe UI',
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        'Open Sans',
+        'Helvetica Neue',
+        sans-serif;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-left: 1rem;
+}
+
+.details h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.details p {
+    font-size: 1rem;
+    font-family: system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        'Segoe UI',
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        'Open Sans',
+        'Helvetica Neue',
+        sans-serif;
+}
+
+#topbar {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--white);
+}
+
+#test {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+#topbar>img {
+    margin-top: 1.5rem;
+    margin-left: 2rem;
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 10px;
+}
+
+#topbar>p {
+    margin-top: 2.5rem;
+    margin-left: 1.5rem;
+    font-size: 0.75rem;
+    font-weight: 550;
+    color: var(--purple);
+    font-family: 'Roboto', sans-serif;
+}
+
+.separator {
+    border: 1px solid var(--purple);
+}
+
+
+.menu a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+}
+
+.menu a:hover {
+    color: grey;
+    text-decoration: none;
+}
+
+#toggle:checked~.menu {
+    display: block;
+}
+
+#toggle {
+    display: none;
+}
+
+#topbar label {
+    visibility: hidden;
+}
+
+footer {
+    display: flex;
+    background-color: var(--purple);
+    color: var(--white);
+    padding: 1rem;
+    font-size: 0.75rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    justify-content: center;
+}
+
+footer>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer>div>div {
+    display: flex;
+    flex-direction: row;
+}
+
+footer img {
+    width: 5rem;
+    height: 5rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin-top: 2.5rem;
+    margin-left: 1.5rem;
+    font-size: 0.75rem;
+    font-weight: 550;
+    color: var(--white);
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+
+}
+
+footer a {
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 550;
+    color: var(--white);
+    font-family: 'Roboto', sans-serif;
+}
