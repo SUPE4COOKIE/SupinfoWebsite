@@ -1,5 +1,6 @@
 :root {
     --purple: #3D2683;
+    --lightpurple: #8074b1;
     --white: #fafaf8;
 }
 
@@ -39,13 +40,17 @@ body {
     display: none;
 }
 
+#toggle2 {
+    display: none;
+}
+
 #programmes {
     display: none;
     flex-direction: column;
     align-items: center;
     margin-left: 3rem;
     position: sticky;
-    top: 10rem;
+    top: 8rem;
     z-index: 9;
 }
 
@@ -166,13 +171,6 @@ body {
 }
 
 
-
-
-
-
-
-
-
 #toggle:checked~.menu {
     display: block;
 }
@@ -183,7 +181,7 @@ body {
     background-color: var(--white);
 }
 
-#test {
+#stickycontainer {
     position: sticky;
     top: 0;
     z-index: 1;
@@ -259,7 +257,9 @@ footer a {
     font-family: 'Roboto', sans-serif;
 }
 
-
+#mobile_submenu {
+    display: none;
+}
 
 @media only screen and (max-width: 600px) {
     label {
@@ -292,6 +292,10 @@ footer a {
         display: block;
     }
 
+    #toggle2:checked~#mobile_submenu {
+        display: block;
+    }
+
 
     label img {
         cursor: pointer;
@@ -318,4 +322,15 @@ footer a {
         font-size: 1.5rem;
     }
 
+    #mobile_submenu {
+        display: none;
+    }
+
+    #mobile_submenu a {
+        background-color: var(--lightpurple);
+    }
+
+    #programmes {
+        display: none !important;
+    }
 }

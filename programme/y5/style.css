@@ -1,6 +1,7 @@
 :root {
     --purple: #3D2683;
     --white: #fafaf8;
+    --lightpurple: #8074b1;
 }
 
 body {
@@ -95,6 +96,9 @@ body {
         display: block;
     }
 
+    #toggle2:checked~#mobile_submenu {
+        display: block;
+    }
 
     label img {
         cursor: pointer;
@@ -104,6 +108,20 @@ body {
         right: 0;
         margin-top: 2rem;
         margin-right: 0.5rem;
+    }
+
+
+
+    #mobile_submenu {
+        display: none;
+    }
+
+    #mobile_submenu a {
+        background-color: var(--lightpurple);
+    }
+
+    #programmes {
+        display: none !important;
     }
 }
 
@@ -178,8 +196,36 @@ body {
         top: 6.5rem;
         z-index: 1;
     }
+
+
+    #mobile_submenu {
+        display: none;
+    }
 }
 
+#toggle2 {
+    display: none;
+}
+
+#programmes {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 3rem;
+    position: sticky;
+    top: 10rem;
+    z-index: 9;
+}
+
+#programmes a {
+    color: var(--purple);
+    border-bottom: 1px solid gray;
+    padding: 25px;
+    text-decoration: none;
+    font-size: 1rem;
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+}
 
 
 
@@ -235,7 +281,7 @@ body {
     background-color: var(--white);
 }
 
-#test {
+#stickycontainer {
     position: sticky;
     top: 0;
     z-index: 1;

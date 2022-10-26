@@ -12,7 +12,7 @@
 
 <body>
     <input type="checkbox" id="toggle">
-    <div id="test">
+    <div id="stickycontainer">
         <div id="topbar">
             <img src="img/logo.webp" alt="">
             <p>L’ÉCOLE DES EXPERTS MÉTIERS <br><br> DE L’INFORMATIQUE</p>
@@ -24,17 +24,23 @@
     <div class="menu">
         <a href="#">Accueil</a>
         <a href="trombinoscope/index.html">Trombinoscope</a>
-        <a href="programme/index.html" id="programme">▼ Programme</a>
+        <a href="#" id="programme"><label for="toggle2">▼ Programme</label></a>
+        <input type="checkbox" id="toggle2">
+        <div id="mobile_submenu">
+            <a href="programme/y1/index.html">Année 1</a><a href="programme/y2/index.html">Année 2</a><a
+                href="programme/y3/index.html">Année 3</a><a href="programme/y4/index.html">Année 4</a><a
+                href="programme/y5/index.html">Année 5</a>
+        </div>
         <a href="planning/index.html">Planning</a>
         <a href="contact/index.html">Contact</a>
 
     </div>
     <div id="programmes">
-        <a href="programme/y1">année 1</a>
-        <a href="programme/y2">année 2</a>
-        <a href="programme/y3">année 3</a>
-        <a href="programme/y4">année 4</a>
-        <a href="programme/y5">année 5</a>
+        <a href="programme/y1/index.html">année 1</a>
+        <a href="programme/y2/index.html">année 2</a>
+        <a href="programme/y3/index.html">année 3</a>
+        <a href="programme/y4/index.html">année 4</a>
+        <a href="programme/y5/index.html">année 5</a>
     </div>
 
     <div id="mainaxiscolumn">
@@ -73,7 +79,7 @@
                 <p>L’ÉCOLE DES EXPERTS MÉTIERS <br><br> DE L’INFORMATIQUE</p>
             </div>
             <p><b>Adresse : </b>85 Boulevard Marius Vivier-Merle</p>
-            <p><b>Email : </b> <a href="mailto:hien.kean@supinfo.com">heineken@supinfo.com</a></p>
+            <p><b>Email : </b> <a href="mailto:hien.kean@supinfo.com">hien.kean@supinfo.com</a></p>
             <p><b>Téléphone : </b> <a href="tel:+33428293576">+33 4 28 29 35 76</a></p>
         </div>
     </footer>

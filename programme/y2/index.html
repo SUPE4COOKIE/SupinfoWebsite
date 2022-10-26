@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Supinfo - programme 2</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="../../app.js"></script>
 </head>
 
 <body>
     <input type="checkbox" id="toggle">
-    <div id="test">
+    <div id="stickycontainer">
         <div id="topbar">
             <img src="../../img/logo.webp" alt="">
             <p>L’ÉCOLE DES EXPERTS MÉTIERS <br><br> DE L’INFORMATIQUE</p>
@@ -19,13 +20,26 @@
         </div>
         <div class="separator"></div>
     </div>
-
+    </div>
     <div class="menu">
         <a href="../../index.html">Accueil</a>
-        <a href="#">Trombinoscope</a>
-        <a href="../../programme/index.html">Programme</a>
+        <a href="../../trombinoscope/index.html">Trombinoscope</a>
+        <a href="#" id="programme"><label for="toggle2">▼ Programme</label></a>
+        <input type="checkbox" id="toggle2">
+        <div id="mobile_submenu">
+            <a href="../y1/index.html">Année 1</a><a href="../y2/index.html">Année 2</a><a href="../y3/index.html">Année
+                3</a><a href="../y4/index.html">Année 4</a><a href="../y5/index.html">Année 5</a>
+        </div>
         <a href="../../planning/index.html">Planning</a>
         <a href="../../contact/index.html">Contact</a>
+
+    </div>
+    <div id="programmes">
+        <a href="../y1/index.html">année 1</a>
+        <a href="../y2/index.html">année 2</a>
+        <a href="../y3/index.html">année 3</a>
+        <a href="../y4/index.html">année 4</a>
+        <a href="../y5/index.html">année 5</a>
     </div>
     <div class="maincontainer">
         <div class="navibar">
